@@ -1,6 +1,6 @@
 import sys
 
-d = 1
+taskNum = 1
 
 def main():
     command = str(input('Please, type a command: ')).lower()
@@ -23,9 +23,6 @@ def cmds(command):
         case '/cleartasks':
             clearTasks()
 
-            global d
-            d = 1
-
         case '/exit':
             exit()
 
@@ -41,13 +38,13 @@ def help():
             '/exit: Exits the "Untitled task manager".\n')
 
 def createTask(task):
-    global d
+    global taskNum
     with open('tasks.txt', 'a', newline='') as tasks:
-        tasks.write(f'{d}. {task}\n')
+        tasks.write(f'{taskNum}. {task}\n')
     
     print('Task created.\n')
 
-    d += 1
+    taskNum += 1
 
 def showTasks():
     with open ('tasks.txt', 'r') as tasks:
@@ -80,3 +77,5 @@ if __name__ == '__main__':
     print('Hello! You are currently using the "Untitled task manager".')
     while (True):
         main()
+
+#TODO Create a method to delete only 1 task

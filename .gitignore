@@ -1,5 +1,3 @@
 .vscode/
-build/
-dist/
 task_manager.spec
 tasks.txt
