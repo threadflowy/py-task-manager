@@ -31,7 +31,7 @@ def cmds(command):
             help()
 
 def help():
-    print('\n/help: Views all available commands.\n'
+    print('\n/help: Shows all available commands.\n'
             '/createtask: Creates one task.\n'
             '/showtasks: Shows your tasks.\n'
             '/cleartasks: Deletes all of your tasks.\n'
